@@ -1,0 +1,306 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    color:white;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    color:white;
+}
+a:hover{
+    color: rgb(150,150,150);
+}
+a *:hover{
+    color: rgb(150,150,150);
+}
+#top
+{
+    display:grid;
+    background-image: url("res/Background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 101vh;
+    width: 101vw;
+    margin-left: -9px;
+    margin-top: -9px;
+    grid-template-rows: 1fr 5fr 4fr 2fr;
+    grid-template-columns: 1fr 70px 5fr;
+    grid-gap: 0px;
+}
+
+#downarrow
+{
+    color:white;
+    text-align:center;
+    font-size: 75px;
+    grid-row-start:-2;
+    grid-row-end:-1;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+}
+
+#blank{
+    grid-row-start:1;
+    grid-row-end:2;
+}
+
+#sidearrow{
+    grid-column-start:2;
+    grid-column-end:3;
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    color: white;
+    font-size: 20vh;
+}
+
+
+#downarrow i:hover
+{
+    cursor: pointer;
+    color: rgb(150,150,150);
+}
+
+#currentauction{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:3;
+    grid-row-end:4;
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    font-size: 5vh;
+    text-align: right;
+}
+
+
+#auctioninfo{
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row-start:3;
+    grid-row-end:4;
+}
+
+h1{
+    color:white;
+    font-family:'Do Hyeon', sans-serif;;
+    font-size: 15vh;
+    text-align: center;
+}
+
+h2{
+    color:white;
+}
+
+#title{
+    text-align:center;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+.cell{
+    background-color: rgba(0,0,0,.5);
+    grid-column-start:1;
+    grid-column-end:-1;
+    
+}
+
+/*
+* Styles current auction info
+*/
+#auctioninfo{
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row-start:3;
+    grid-row-end:4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#infogrid{
+    display:grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+}
+.infocell{
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.infotitle{
+    font-size: 120%;
+}
+
+.info{
+    font-size: 250%;
+}
+
+#participate{
+    grid-column-start:-2;
+    grid-column-end:-1;
+    grid-row-start:1;
+    grid-row-end:3;
+    background-color: rgba(47, 173, 26,.8);
+    font-size: 200%;
+}
+
+#participate:hover{
+    background-color: rgba(72, 255, 40,.8);
+    cursor:pointer;
+}
+
+#charity:hover{
+    color: rgb(150,150,150);
+    cursor:pointer;
+}
+
+
+/*
+* About Page
+*/
+#about{
+    display:grid;
+    background-image: url("res/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 102vh;
+    width: 101vw;
+    margin-left: -9px;
+    margin-top: 0px;
+    grid-template-rows: 3fr 2fr;
+    grid-template-columns:1fr;
+}
+
+#abouttitle{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#aboutoptions{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.aboutcell{
+    
+    background-color: rgba(0,0,0,.5);
+}
+
+/*
+* Code for the participate box
+*/
+
+.hidden{
+    visibility: hidden;
+}
+
+#participatebox{
+    position: fixed;
+    flex-direction: column;
+    left: 0; 
+    right: 0;
+    top:0;
+    bottom:0;
+    margin: auto;
+    height: 90vh;
+    width:70vw;
+    background-color: rgb(120,120,120);
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align:center;
+}
+
+#Instructions{
+    font-size:2em;
+}
+
+#x {
+    padding: 5px;
+    position: absolute;
+    top:0px;
+    right:5px;
+    font-size: 50px;
+}
+#x:hover{
+    cursor:pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+input[type=text], select {
+    width: 75%;
+    font-size:1.5em;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button{
+background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Action Auctions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script>
+    function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+
+    </script>
+</head>
+
+<body>
+    <div id="top">
+        <div class="cell" id="blank"></div>
+        <div class="cell" id="title">
+            <h1><b>ACTION</b> AUCTIONS</h1>
+        </div>
+        <div class="cell" id="currentauction">
+            <h2>Current<br/>Auction
+            </h2>
+        </div>
+        <div class='cell' id="sidearrow"><i class="fa fa-angle-right"></i></div>
+        <div class="cell" id="auctioninfo">
+            <div id="infogrid">
+                <div id='charity_head' class='infocell infotitle'>
+                    Current Charity:
+                </div>
+                <div id='max_head' class='infocell infotitle'>
+                    Max Bidders:
+                </div>
+                <div id='participate' class='infocell'>
+                    Participate
+                </div>
+                <div onclick="window.open('https://www.againstmalaria.com/')" id='charity' class='infocell info'>
+                    AMF
+                </div>
+                <div id='max_bidders' class='infocell info'>
+                    25
+                </div>
+            </div>
+
+        </div>
+        <div class="cell" id="downarrow">
+            <a href="#about"><i class="fa fa-angle-down"></i></a>
+        </div>
+    </div>
+    <div id="about">
+        <div class='aboutcell' id="abouttitle">
+            <h1>ABOUT</h1>
+        </div>
+        <div class='aboutcell' id="aboutoptions">
+
+            <a href="index.html">
+                <h2>How It Works</h2>
+            </a>
+            <a href="index.html">
+                <h2>Who We Are</h2>
+            </a>
+            <a href="https://www.givewell.org/">
+                <h2>Our Charities</h2>
+            </a>
+            <a href="https://www.ethereum.org/ether">
+                <h2>Get Ethereum</h2>
+            </a>
+
+        </div>
+    </div>
+    <div id="participatebox" class='hidden'>
+        <div id="x">&times;</div>
+        <div id="Instructions">
+            <h2>
+                USE METAMASK TO DONATE <br/> TO THIS ADDRESS:
+            </h2>
+        </div>
+        <div id="copybox">
+            <input type="text" value="0x9F46j4Si6h0e" id="myInput">
+
+            <div class="tooltip">
+                <button onclick="myFunction()" onmouseout="outFunc()">
+             <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  COPY TEXT
+  </button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
