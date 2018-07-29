@@ -3,6 +3,7 @@ body{
     color:white;
     overflow: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
@@ -40,7 +41,7 @@ a *:hover{
     grid-gap: 0px;
 }
 
-#downarrow
+#downarrow, #downarrow2
 {
     color:white;
     text-align:center;
@@ -68,7 +69,7 @@ a *:hover{
 }
 
 
-#downarrow i:hover
+#downarrow i:hover, #downarrow2 i:hover
 {
     cursor: pointer;
     color: rgb(150,150,150);
@@ -285,7 +286,7 @@ h2{
     opacity: 1;
 }
 
-input[type=text], select {
+input[type=text], select, input[type=number] {
     width: 75%;
     font-size:1.5em;
     padding: 12px 20px;
@@ -303,4 +304,80 @@ background-color: #4CAF50;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+/*
+* Start an auction
+*/
+#start
+{
+    display:grid;
+    background-image: url("res/start.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 101vh;
+    width: 101vw;
+    margin-left: -9px;
+    margin-top: 0px;
+    grid-template-rows: 1fr 5fr 4fr 2fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+}
+
+#startblank{
+    grid-row-start:1;
+    grid-row-end:2;
+}
+
+
+#starttitle{
+    text-align:center;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+.startcell{
+    background-color: rgba(0,0,0,.5);
+    grid-column-start:1;
+    grid-column-end:-1;
+    
+}
+
+#startform{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.startformcell{
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#startgrid{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px;
+    height: 100%;
+    width: 75%;
+}
+
+#create{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start:-2;
+    grid-row-end:-1;
+    background-color: rgba(47,173,26,.8);
+}
+
+
+#create:hover{
+    background-color: rgba(72, 255, 40,.8);
+    cursor:pointer;
+}
+
+.starttitle{
+    font-size: 1.5em;
 }
